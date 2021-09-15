@@ -86,6 +86,9 @@ echo $?
 	- `{ALERT.SENDTO}`
 	- `Enabled: True`
 
+![thinq-sms sh-mediatype](https://user-images.githubusercontent.com/7428453/133491073-e2405d39-7890-47e4-9842-8463f8fd6326.png)
+
+
 
 6. Create an action that uses at least your new media type named `thinQ SMS`.
 

@@ -94,7 +94,7 @@ echo $?
 
 7. You can optionally create escalations described in [escalations](https://www.zabbix.com/documentation/current/manual/config/notifications/action/escalations) document.
 
-#### Scenario 1: Use Weekly Schedule and Rotate Numbers 
+#### Scenario 2: Use Weekly Schedule and Rotate Numbers 
 
 1. Copy all scripts and conf files  into your zabbix alert scripts folder (normally located in ``/usr/lib/zabbix/alertscripts``)
 

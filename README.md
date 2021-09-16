@@ -12,7 +12,7 @@ The script uses [thinQ](https://apidocs.thinq.com/) API to send SMS. You can che
 
 This is the primary script for sending messages via thinq api. You need edit ``thinq-sms.conf`` file or specify required parameters on the command line.
 
-``Usage: "twilio-sms.sh [-v] [-c configfile] [-f from-did] [-u username] [-t token] [-a accountid] <-m message> <number> [number[number...]]"``
+``Usage: twilio-sms.sh <toDID> <subject> <message>``
 
   
 
@@ -63,7 +63,7 @@ You will be on call tomorrow (08/14/17) at 12:01 AM. Please plan to respond to a
 
 ```
 
-/usr/lib/zabbix/alertscripts/thinq-sms.sh -c /usr/lib/zabbix/alertscripts/thinq-sms.conf -m "Test Message" 5555555555
+/usr/lib/zabbix/alertscripts/thinq-sms.sh 5555555555 "Test Subject" "Test Message"
 
 echo $?
 
@@ -80,15 +80,6 @@ echo $?
 - Name: `thinQ SMS`
 - Type: `Script`
 - Script name: `thinq-sms.sh`
-- Script parameters:
-	- `-c/usr/lib/zabbix/alertscripts/thinq-sms.conf`
-	- `-m{ALERT.MESSAGE}`
-	- `{ALERT.SENDTO}`
-	- `Enabled: True`
-
-![thinq-sms sh-mediatype](https://user-images.githubusercontent.com/7428453/133491073-e2405d39-7890-47e4-9842-8463f8fd6326.png)
-
-
 
 6. Create an action that uses at least your new media type named `thinQ SMS`.
 
@@ -102,7 +93,7 @@ echo $?
 
 ```
 
-/usr/lib/zabbix/alertscripts/thinq-sms.sh -c /usr/lib/zabbix/alertscripts/thinq-sms.conf -m "Test Message" 5555555555
+/usr/lib/zabbix/alertscripts/thinq-sms.sh 5555555555 "Test Subject" "Test Message"
 
 echo $?
 
@@ -118,10 +109,6 @@ Change the owner and group of all scripts and directories to zabbix.
 - Name: `thinQ SMS`
 - Type: `Script`
 - Script name: `thinq-alert.sh`
-- Script parameters:
-	- `-c/usr/lib/zabbix/alertscripts/thinq-alert.conf`
-	- `{ALERT.MESSAGE}`
-	- `Enabled: True`
 
 6. Create an action that uses your new media type named `thinQ SMS`.
 

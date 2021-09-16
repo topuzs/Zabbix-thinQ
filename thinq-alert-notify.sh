@@ -63,7 +63,7 @@ then
     message="You will be on call tomorrow ($tomorrow) at 12:01 AM. Please plan to respond to any alerts for the next 7 days.";
     echo "$message"
     
-    $DIRECTORY/thinq-sms.sh -c $DIRECTORY/thinq-sms.conf -m $message $PHONENUMBER
+    $DIRECTORY/thinq-sms.sh $PHONENUMBER $message "\n"
     echo ok
 else
     if [ "$VERBOSE" -eq 1 ]; then echo "Today is not the notify day, exiting..."; fi

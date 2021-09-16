@@ -46,6 +46,6 @@ else
 	PHONENUMBER="$OnCallNumber"
 fi
 
-$DIRECTORY/thinq-sms.sh -c $DIRECTORY/thinq-sms.conf -m "$1" $PHONENUMBER
+$DIRECTORY/thinq-sms.sh $PHONENUMBER "$1" "$2" 
 
 echo ok

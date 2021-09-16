@@ -12,7 +12,7 @@ The script uses [thinQ](https://apidocs.thinq.com/) API to send SMS. You can che
 
 This is the primary script for sending messages via thinq api. You need edit ``thinq-sms.conf`` file or specify required parameters on the command line.
 
-``Usage: twilio-sms.sh <toDID> <subject> <message>``
+``Usage: thinq-sms.sh <toDID> <subject> <message>``
 
   
 
